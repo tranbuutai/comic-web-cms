@@ -17,7 +17,6 @@ interface Props {
 export const HomePage = ({ mathUrl }: Props) => {
     const { data: comics } = useFetchData<ComicType[]>(COMICS, undefined, where("deleted", "==", false));
 
-    console.log("home page");
     return (
         <div>
             <div className="flex justify-between items-center pt-7">
