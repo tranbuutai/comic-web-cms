@@ -13,10 +13,11 @@ import { useFetchData } from "hooks";
 interface Props {
     mathUrl: string;
 }
-const q = where("deleted", "==", false);
-export const HomePage = ({ mathUrl }: Props) => {
-    const { data: comics } = useFetchData<ComicType[]>(COMICS, undefined, q);
 
+export const HomePage = ({ mathUrl }: Props) => {
+    const { data: comics } = useFetchData<ComicType[]>(COMICS, undefined, where("deleted", "==", false));
+
+    console.log("home page");
     return (
         <div>
             <div className="flex justify-between items-center pt-7">
