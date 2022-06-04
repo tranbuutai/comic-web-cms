@@ -72,8 +72,7 @@ export const ComicForm = ({ initialValues, onSubmit, onDrop, imageUpload, showEr
                                 className="bg-red-100 border mt-3 border-red-400 text-red-700 px-4 py-3 rounded relative"
                                 role="alert"
                             >
-                                <strong className="font-bold">Ối dời ơi!</strong>{" "}
-                                <span className="block sm:inline">Chưa up ảnh kìa.</span>
+                                <span className="block sm:inline">Bạn chưa tải ảnh lên.</span>
                             </div>
                         )}
 
