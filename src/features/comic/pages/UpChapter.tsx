@@ -81,13 +81,13 @@ export const UpChapter = () => {
                     {
                         pending: "Loading..",
                         success: "Xóa thành công",
-                        error: "Lỗi kìa địt mẹ 🤯",
+                        error: "Xóa không thành công",
                     }
                 );
             }
         } catch (error) {
             console.log({ error });
-            toast.error("Ô NÔ");
+            toast.error("Xóa thất bại");
         }
     };
 
@@ -188,21 +188,21 @@ export const UpChapter = () => {
                 toast.promise(updateChapter, {
                     pending: "Đang cập nhật",
                     success: "Done 👌",
-                    error: "Lỗi kìa địt mẹ 🤯",
+                    error: "Cập nhật thất bại",
                 });
             } else {
                 compareListChapter(comic?.listChapter!, "", nameChapter);
                 await toast.promise(addChapter, {
                     pending: "Đang thêm",
                     success: "Done 👌",
-                    error: "Lỗi kìa địt mẹ 🤯",
+                    error: "Thêm thất bại",
                 });
 
                 history.push(`/${mainURL}/${comicId}/detail`);
             }
         } catch (error) {
             console.log({ error });
-            toast.error("Ô NÔ");
+            toast.error("Có lỗi xảy ra");
         }
     };
 
@@ -284,7 +284,7 @@ export const UpChapter = () => {
                                 onClick={updatePosition}
                                 className="btn text-white bg-green-500 hover:bg-green-600 active:bg-green-500"
                             >
-                                Lưu thay đổi
+                                Lưu thay đổi vị trí
                             </button>
                         )}
                     </div>

@@ -48,12 +48,10 @@ export const ConfirmModal = ({ isOpen, idGenre, closeModal }: Props) => {
                         >
                             <div className="absolute xl:right-1/2 xl:translate-x-3/4 transform top-20 z-0 inline-block w-full max-w-sm p-6 my-8 overflow-hidden text-left align-middle transition-all bg-white shadow-xl rounded-lg">
                                 <Dialog.Title as="h3" className="text-lg font-medium leading-6 text-gray-900">
-                                    Chắc không ku
+                                    Bạn đồng ý xóa thể loại này?
                                 </Dialog.Title>
                                 <div className="mt-2">
-                                    <p className="text-sm text-gray-500">
-                                        Có không giữ mất đừng tìm, xóa là mất luôn đấy.
-                                    </p>
+                                    <p className="text-sm text-gray-500">Khi xóa sẽ không khôi phục được.</p>
                                 </div>
 
                                 <div className="mt-4 space-x-2 flex justify-end">
@@ -69,7 +67,7 @@ export const ConfirmModal = ({ isOpen, idGenre, closeModal }: Props) => {
                                         className="inline-flex justify-center px-4 py-2 text-sm text-white bg-red-600 font-semibold border border-transparent rounded-md active:bg-red-600 hover:bg-red-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 focus-visible:ring-red-500"
                                         onClick={confirmDelete}
                                     >
-                                        Ok luôn
+                                        Đồng ý
                                     </button>
                                 </div>
                             </div>

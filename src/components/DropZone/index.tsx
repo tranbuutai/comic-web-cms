@@ -36,7 +36,7 @@ const DropZone = ({ handleFile, urlImage }: Props) => {
             ) : (
                 <div className="group-hover:text-gray-400 text-gray-500 h-full flex items-center justify-center flex-col transition-all ">
                     <DownloadIcon className="w-20 group-hover:text-green-300" />
-                    <span className="text-center"> Chọn hoặc quăng tao cái bonk</span>
+                    <span className="text-center"> Chọn ảnh tại đây</span>
                 </div>
             )}
         </div>

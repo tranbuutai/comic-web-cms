@@ -27,7 +27,7 @@ export const HomePage = ({ mathUrl }: Props) => {
                     </button>
                 </Link>
             </div>
-            <div className="flex justify-between mt-10">
+            {/* <div className="flex justify-between mt-10">
                 <div className="relative z-10 w-52">
                     <input
                         type="text"
@@ -95,7 +95,7 @@ export const HomePage = ({ mathUrl }: Props) => {
                         </Menu.Items>
                     </Transition>
                 </Menu>
-            </div>
+            </div> */}
             <div className="mt-8 space-y-5 sm:grid sm:grid-cols-2 lg:grid-cols-3 2xl: 2xl:grid-cols-4 sm:space-y-0 sm:gap-5 ">
                 {comics ? (
                     comics.map((comic) => <CardItem key={comic.id} {...comic} />)

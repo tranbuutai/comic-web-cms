@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { toast } from "react-toastify";
 
 import { AddGenreType } from "models";
 import { InputField } from "components/FormFields";
@@ -34,13 +35,23 @@ export const GenreModal = ({ isOpen, closeModal, isEditing, updateData }: Props)
         try {
             const slug = generateSlug(data.name);
             if (isEditing) {
-                firestore.updateDb(GENRES, updateData?.id!, { ...data, slug });
+                toast.promise(firestore.updateDb(GENRES, updateData?.id!, { ...data, slug }), {
+                    pending: "Đang cập nhật",
+                    success: "Done 👌",
+                    error: "Cập nhật thất bại",
+                });
+                closeAndReset();
             } else {
-                firestore.addDb(GENRES, { ...data, slug });
-                reset(defaultValues);
+                toast.promise(firestore.addDb(GENRES, { ...data, slug }), {
+                    pending: "Đang thêm",
+                    success: "Done 👌",
+                    error: "Thêm thất bại",
+                });
+                closeAndReset();
             }
         } catch (error) {
             console.log({ error });
+            toast.error("Có lỗi xảy ra");
         }
     };
 

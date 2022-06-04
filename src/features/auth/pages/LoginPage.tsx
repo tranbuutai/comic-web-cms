@@ -45,7 +45,7 @@ export const LoginPage = () => {
     return (
         <div className="flex items-center justify-center">
             <div className="flex-col justify-center hidden ml-4 border-t-0 border border-gray-200 lg:flex h-[96vh] shadow-xl rounded-xl">
-                <h3 className="px-10 pb-10 text-3xl font-bold font-sans">WelCome Back, Bro</h3>
+                <h3 className="px-10 pb-10 text-3xl font-bold font-sans">WelCome Back</h3>
                 <img
                     alt="login-img"
                     src="https://minimal-kit-react.vercel.app/static/illustrations/illustration_login.png"
