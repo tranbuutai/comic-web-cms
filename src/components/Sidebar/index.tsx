@@ -41,7 +41,7 @@ const Sidebar = ({ active, handleActive, pathName }: Props) => {
                         alt=""
                     />
                     <p className="text-base font-medium text-gray-500 transition-all duration-100">
-                        TiếnDepTraiBodoi
+                        Admin
                     </p>
                 </div>
                 <div className="flex flex-col">
